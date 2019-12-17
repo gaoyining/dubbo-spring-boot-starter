@@ -4,6 +4,11 @@ import java.lang.reflect.Field;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+import com.alibaba.dubbo.spring.boot.bean.ClassIdBean;
+import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.spring.ReferenceBean;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanCreationException;
@@ -18,11 +23,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.alibaba.dubbo.config.annotation.Service;
-import com.alibaba.dubbo.config.spring.ReferenceBean;
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
-import com.alibaba.dubbo.spring.boot.bean.ClassIdBean;
 
 /**
  * DubboConsumerAutoConfiguration

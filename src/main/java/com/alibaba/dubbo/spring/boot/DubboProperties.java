@@ -3,15 +3,9 @@ package com.alibaba.dubbo.spring.boot;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.apache.dubbo.config.*;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import com.alibaba.dubbo.config.ApplicationConfig;
-import com.alibaba.dubbo.config.ConsumerConfig;
-import com.alibaba.dubbo.config.ModuleConfig;
-import com.alibaba.dubbo.config.MonitorConfig;
-import com.alibaba.dubbo.config.ProtocolConfig;
-import com.alibaba.dubbo.config.ProviderConfig;
-import com.alibaba.dubbo.config.RegistryConfig;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 
 /**

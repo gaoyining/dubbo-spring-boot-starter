@@ -1,9 +1,8 @@
 package com.alibaba.dubbo.spring.boot;
 
-import java.util.Map;
-
-import javax.annotation.PostConstruct;
-
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.spring.ServiceBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
@@ -13,9 +12,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
-import com.alibaba.dubbo.config.annotation.Service;
-import com.alibaba.dubbo.config.spring.ServiceBean;
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+import javax.annotation.PostConstruct;
+import java.util.Map;
+
 
 /**
  * DubboProviderAutoConfiguration

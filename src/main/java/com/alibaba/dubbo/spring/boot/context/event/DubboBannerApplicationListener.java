@@ -2,15 +2,15 @@ package com.alibaba.dubbo.spring.boot.context.event;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.dubbo.common.Version;
+import org.apache.dubbo.qos.server.DubboLogo;
 import org.springframework.boot.Banner;
 import org.springframework.boot.Banner.Mode;
 import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.logging.LoggingApplicationListener;
+import org.springframework.boot.context.logging.LoggingApplicationListener;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.annotation.Order;
 
-import com.alibaba.dubbo.common.Version;
-import com.alibaba.dubbo.qos.server.DubboLogo;
 import com.alibaba.dubbo.spring.boot.bean.DubboSpringBootStarterConstants;
 
 /**

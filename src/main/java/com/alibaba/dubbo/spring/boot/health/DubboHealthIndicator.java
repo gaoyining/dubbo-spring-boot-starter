@@ -1,13 +1,13 @@
 package com.alibaba.dubbo.spring.boot.health;
 
+import com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration;
+import com.alibaba.dubbo.spring.boot.bean.ClassIdBean;
+import com.alibaba.dubbo.spring.boot.listener.ConsumerSubscribeListener;
+import org.apache.dubbo.rpc.service.EchoService;
 import org.springframework.boot.actuate.health.AbstractHealthIndicator;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.Status;
 
-import com.alibaba.dubbo.rpc.service.EchoService;
-import com.alibaba.dubbo.spring.boot.DubboConsumerAutoConfiguration;
-import com.alibaba.dubbo.spring.boot.bean.ClassIdBean;
-import com.alibaba.dubbo.spring.boot.listener.ConsumerSubscribeListener;
 
 /**
  * Dubbo health indicator

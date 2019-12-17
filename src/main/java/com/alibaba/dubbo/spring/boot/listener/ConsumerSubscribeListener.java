@@ -2,14 +2,14 @@ package com.alibaba.dubbo.spring.boot.listener;
 
 import java.util.Set;
 
-import com.alibaba.dubbo.common.URL;
-import com.alibaba.dubbo.common.extension.Activate;
-import com.alibaba.dubbo.common.utils.ConcurrentHashSet;
-import com.alibaba.dubbo.rpc.Invoker;
-import com.alibaba.dubbo.rpc.RpcException;
-import com.alibaba.dubbo.rpc.listener.InvokerListenerAdapter;
 import com.alibaba.dubbo.spring.boot.bean.ClassIdBean;
 import com.alibaba.dubbo.spring.boot.bean.DubboSpringBootStarterConstants;
+import org.apache.dubbo.common.URL;
+import org.apache.dubbo.common.extension.Activate;
+import org.apache.dubbo.common.utils.ConcurrentHashSet;
+import org.apache.dubbo.rpc.Invoker;
+import org.apache.dubbo.rpc.RpcException;
+import org.apache.dubbo.rpc.listener.InvokerListenerAdapter;
 
 /**
  * Dubbo client invoker listener
@@ -26,7 +26,6 @@ public class ConsumerSubscribeListener extends InvokerListenerAdapter {
   public static final Set<ClassIdBean> SUBSCRIBEDINTERFACES_SET =
       new ConcurrentHashSet<ClassIdBean>();
 
-  @Override
   public void referred(Invoker<?> invoker) throws RpcException {
     Class<?> interfaceClass = invoker.getInterface();
     URL url = invoker.getUrl();
@@ -36,7 +35,6 @@ public class ConsumerSubscribeListener extends InvokerListenerAdapter {
     SUBSCRIBEDINTERFACES_SET.add(classIdBean);
   }
 
-  @Override
   public void destroyed(Invoker<?> invoker) {
     Class<?> interfaceClass = invoker.getInterface();
     URL url = invoker.getUrl();
